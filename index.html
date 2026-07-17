@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Meu Site</title>
     <link rel="stylesheet" href="css/sobremim.css"/>
 </head>
@@ -22,22 +23,39 @@
                     alt="Uma menina sorridente de cabelo vermelho, usando um vestido longo preto, de alça.">
             </div>
             <div class="texto">
-                <h1><span>YOHANNE</span></h1>
-                <h2>Karine</h2>
-                <span class="botao">Seja Bem-Vindo!</span>
-            </div>
+                <h1>
+                    <span>YOHANNE</span>
+                </h1>
+                    <h2>
+                        Karine
+                    </h2>
+                        <div class="botoes-redes">
+                            <span class="botao">Seja Bem-Vindo!</span>
+                                <div class="redes-sociais">
+                                    <a href="https://github.com/yohannek" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/yohannekarine/" target="_blank">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/yohannek_/" target="_blank">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
         </section>
-        <hr>
+            <hr>
         <br>
         <section id="texto-sobre" class="secao-sobre">
             <div class="container-texto">
                 <h2>Sobre Mim</h2>
-                <p>
-                    Oie, eu sou a Yohanne, estudante de Desenvolvimento Full Stack e apaixonada por tecnologia, criatividade e aprendizado. Estou sempre buscando evoluir, adquirir novos conhecimentos e desenvolver projetos que unam um bom visual, funcionalidade e uma experiência agradável para o usuário.
-                    <br><br>
-                    Além da tecnologia, a dança faz parte da minha trajetória há muitos anos. Essa vivência me ensinou valores como disciplina, dedicação, trabalho em equipe e criatividade, que hoje também levo para os projetos que desenvolvo.
-                    Este site representa um pouco da minha jornada, reunindo projetos, estudos e experiências que refletem minha evolução e meu compromisso em crescer profissionalmente. Seja Bem-Vindo(a)!
-                </p>
+                    <p>
+                        Oie, eu sou a Yohanne, estudante de Desenvolvimento Full Stack e apaixonada por tecnologia, criatividade e aprendizado. Estou sempre buscando evoluir, adquirir novos conhecimentos e desenvolver projetos que unam um bom visual, funcionalidade e uma experiência agradável para o usuário.
+                        <br><br>
+                        Além da tecnologia, a dança faz parte da minha trajetória há muitos anos. Essa vivência me ensinou valores como disciplina, dedicação, trabalho em equipe e criatividade, que hoje também levo para os projetos que desenvolvo.
+                        Este site representa um pouco da minha jornada, reunindo projetos, estudos e experiências que refletem minha evolução e meu compromisso em crescer profissionalmente. Seja Bem-Vindo(a)!
+                    </p>
             </div>
         </section>
         <section id="nicho" class="secao-nicho">
@@ -50,29 +68,29 @@
                         <span>Arte</span>
                         <span>Tecnologia</span>
                     </div>
-                    <div class="foto-nicho">
-                        <img
-                            src="imagens/eu1certo.png"
-                            alt="Uma menina sorridente de cabelo vermelho, usando um vestido longo preto, de alça.">
+                        <div class="foto-nicho">
+                            <img
+                                src="imagens/eu1certo.png"
+                                alt="Uma menina sorridente de cabelo vermelho, usando um vestido longo preto, de alça.">
+                        </div>
                     </div>
-                </div>
         </section>
         <section id="fotos" class="secao-fotos">
             <h2 class="titulo-fotos">Fotos</h2>
                 <p class="subtitulo-fotos">fotos por Yohanne</p>
-            <div class="galeria">
-                <div class="item-foto">
-                    <img
-                        src="imagens/madrigal.jpeg"
-                        alt="menina vestida de isabela madrigal">
-                    <h3>Isabela Madrigal</h3>
-                    <p>Estava trabalhando no circo como Isabela Madrigal</p>
-                </div>
+                    <div class="galeria">
+                        <div class="item-foto">
+                            <img
+                                src="imagens/madrigal.jpeg"
+                                alt="menina vestida de isabela madrigal">
+                            <h3>Isabela Madrigal</h3>
+                        <p>Estava trabalhando no circo como Isabela Madrigal</p>
+                    </div>
                 <div class="item-foto">
                     <img
                         src="imagens/isabela.jpeg"
                         alt="menina vestida de isabela Madrigal">
-                    <h3>Isabela Madrigal</h3>
+                        <h3>Isabela Madrigal</h3>
                     <p>Apresentação da escola de dança, como Isabela Madrigal.</p>
                 </div>
                  <div class="item-foto">
@@ -125,5 +143,17 @@
             <p>©️ 2026 Yohanne Karine. Todos os direitos reservados.</p>
         </div>
         </footer>
+
+        <script>
+            const menu = document.querySelector('.menu');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) { 
+                    menu.classList.add('scrolled');
+                } else {
+                menu.classList.remove('scrolled');
+            }
+            });
+        </script>
     </body>
 </html>
