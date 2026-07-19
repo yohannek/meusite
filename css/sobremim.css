@@ -352,15 +352,32 @@ html{
 
     .inicio{ 
         flex-direction: column;
-        padding: 100px 20px; 
+        padding: 60px 20px; 
         text-align: center;
         gap: 30px;
     }
-    .texto{ text-align: center; }
+    .texto{ text-align: center; align-items: center;}
     .texto h1 span{ font-size: 50px; }
-    .texto h2{ font-size: 35px; }
-    .foto img{ width: 250px;
-               height: 250px;
+    .texto h1 i{
+        font-size: 20px;
+        align-self: center;
+        margin-left:0;
+    }
+    
+    .foto img{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        gap: 20px;
+    }
+
+    .botao{
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+
+    .redes-sociais a{
+        font-size: 24px;
     }
     
     .secao-sobre{ padding: 60px 20px; }
