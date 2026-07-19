@@ -11,18 +11,22 @@ body{
 }
 
 .menu{
-   background: #111;
-    padding:18px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    padding:15px 50px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
-    transition: background 0.4s ease;
+    box-sizing: border-box;
+    z-index: 999;
+    gap: 80px;
 }
 
 .menu nav{
-    gap: 40px;
+    gap: 180px;
     display: flex;
     justify-content: center;
 }
@@ -30,8 +34,30 @@ body{
 .menu a{
     text-decoration:none;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu nav a:hover{
+    color: #A00000;
+}
+
+.btn-voltar{
+    background: #8B0000;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    position: absolute;
+    left: 50px;
+}
+
+.btn-voltar:hover{
+    background: #A00000;
 }
 
 .menu.scrolled{
@@ -48,46 +74,69 @@ section{
     display:flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
-    padding: 100px 80px;
+    gap: 80px;
+    padding: 70px 80px;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .foto img{
     width: 480px;
+    height: 480px;
+    object-fit: cover;
     border-radius: 45px;
-    border: 3px solid rgb(115,3,22);
+    border: 4px solid rgb(115,3,22);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.texto h1{
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
 }
 
 .texto h1 span{
     display: block;
     font-size: 90px;
-    font-weight: 900;
+    font-weight: 800;
     color: #000;
     line-height: 1;
-    margin-bottom: 10px;
+    text-align: center;
+}
+
+.texto h1 i {
+    display: inline-block;
+    font-size: 24px;
+    font-style: italic;
+    text-align: left;
+    margin-left: calc(50% - 180px);
 }
 
 .texto h2 {
-    font-family: "URW Chancery L", cursive;
     display: block;
+    font-family: "URW Chancery L", cursive;
     font-size: 50px;
-    font-weight: 400;
     font-style: italic;
-    text-align: right;
+    align-self: flex-start;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 80px;
 }
 
 .texto .botao {
     background: #910202;
     color: #ffffff;
-    padding: 10px 25px;
+    padding: 12px 30px;
     border-radius: 25px;
-    border: 2px solid #000;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
-    display: inline-block;
-    margin-top: 15px;
-    margin-left: auto;
-    text-decoration: none;
 }
 
 .texto .botao:hover {
@@ -164,16 +213,17 @@ html{
 }
 
 .secao-fotos{
-    padding: 100px 80px;
+    padding: 100px 120px;
     background: #fff;
-    text-align: left;
+    text-align: center;
 }
 
 .titulo-fotos{
-    font-size: 35px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    margin-bottom: 5px;
+    color:#000;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
@@ -181,15 +231,16 @@ html{
     font-size: 18px;
     font-style: italic;
     font-family: 'Brush Script MT', cursive;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     color: #555;
 }
 
 .galeria{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-    margin-bottom: 60px;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .item-foto{
@@ -251,12 +302,13 @@ html{
 .botoes-redes {
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    gap: 15px;
     margin-top: 20px;
+    padding-left: 190px;
 }
 
 .botao{
-    display: inline-block;
     padding: 12px 28px;
     border: 2px solid #8B0000;
     background: #8B0000;
@@ -269,6 +321,7 @@ html{
 .redes-sociais{
     display: flex;
     gap: 15px;
+    margin-top: 0;
 }
 
 .redes-sociais a{
@@ -299,14 +352,16 @@ html{
 
     .inicio{ 
         flex-direction: column;
-        padding: 60px 20px; 
+        padding: 100px 20px; 
         text-align: center;
         gap: 30px;
     }
     .texto{ text-align: center; }
     .texto h1 span{ font-size: 50px; }
     .texto h2{ font-size: 35px; }
-    .foto img{ width: 250px; }
+    .foto img{ width: 250px;
+               height: 250px;
+    }
     
     .secao-sobre{ padding: 60px 20px; }
     .secao-sobre h2{ font-size: 35px; }
