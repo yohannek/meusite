@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     let gostos = JSON.parse(localStorage.getItem("meusgostos")) || { 
-        filmes: [{ id: 1, titulo: "Alice no País das Maravilhas", ano: 2010, favorito: true }], 
+        filmes: [{ id: 1, titulo: "Alice no País das Maravilhas", ano: 2010, favorito: true },
+                { id: 2, titulo: "Crepúsculo", ano: 2008, favorito: true } ],
         bandas: [{ id: 1, nome: "BTS", pais: "Coreia do Sul", favorito: true }], 
         series: [{ id: 1, titulo: "The 100", temporadas: 7, favorito: true }] };
     let abaAtual = "filmes";
